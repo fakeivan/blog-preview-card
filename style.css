@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+  font-family: Figtree;
+  src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+:root {
+	--colorprimary: #f4d04e;
+	--colorsecondary: #ffffff;
+	--colorneutral-1: #000000;
+	--colorneutral-2: #7f7f7f;
+}
+
+body {
+	background-color: var(--colorprimary);
+	font-family: "Figtree", sans-serif;
+  font-style: normal;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 32px;
+}
+
+.blogimage {
+  display: block;
+	border-radius: 12px;
+  max-width: 336px;
+	height: 200px;
+	background-image: url('assets/images/illustration-article.svg');
+	background-size: cover;
+	background-color: var(--colorprimary);
+}
+
+p {
+	margin: 0;
+}
+
+.card-container {
+	background-color: var(--colorsecondary);
+	max-width: 384px;
+	min-height: 522px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding: 24px;
+	border-radius: 20px;
+	border: 2px solid var(--colorneutral-1);
+	box-shadow: 8px 8px var(--colorneutral-1);
+	transition: all 0.3s ease-in;
+}
+
+.card-container:hover {
+	box-shadow: 20px 20px var(--colorneutral-1);
+	transform: translate(-12px, -12px);
+	/* transform: translateY(-12px); */
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.category, .authorname {
+	font-size: 14px;
+	font-weight: 800;
+}
+
+.title, .authorname {
+	text-decoration: none;
+	color: var(--colorneutral-1);
+}
+
+.category-container {
+	width: 82px;
+	height: 29px;
+	background-color: var(--colorprimary);
+	color: var(--colorneutral-1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+}
+
+.publishdate {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: 800;
+	transition: all 0.3s ease-in;
+}
+
+.title:hover {
+	color: var(--colorprimary);
+}
+
+.description {
+	color: var(--colorneutral-2);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.author {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.userpic {
+	width: 32px;
+	height: 32px;
+}
